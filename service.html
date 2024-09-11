@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SpaceView</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/icon.jpeg" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@800&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+ 
+
+   <!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top py-lg-0 px-lg-5">
+    <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+        <img src="img/logo2.png" alt="Logo SpaceView" class="img-fluid" style="height: 120px;">
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav mx-auto d-flex justify-content-center p-4 p-lg-0">
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="about.html" class="nav-item nav-link">Sobre</a>
+            <a href="service.html" class="nav-item nav-link active">Vendas</a>
+            <a href="contact.html" class="nav-item nav-link">Contato</a>
+        </div>
+        <button id="open-cart" class="btn btn-primary ms-lg-4">Ver Carrinho</button> <!--Botão de Compra-->
+        <div class="d-none d-lg-flex align-items-center ms-lg-4">
+            <div class="flex-shrink-0 btn-lg-square border border-light rounded-circle">
+                <i class="fa fa-user text-primary"></i>
+            </div>
+            <div class="ps-3">
+                <small class="text-primary mb-0">Perfil</small>
+                <p class="text-light fs-5 mb-0">Arnaldo Cruz</p>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-6 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container text-center pt-5 pb-3">
+        <h1 class="display-4 text-white animated slideInDown mb-3">Vendas</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<div style="height: 60px;"></div>
+
+<!-- Modal do Carrinho -->
+<div id="cart-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Carrinho de Compras</h2>
+        <div id="cart-items" class="list-group mb-4">
+            <!-- Os itens do carrinho serão adicionados dinamicamente aqui -->
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+            <h4>Total: <span id="cart-total">R$ 0,00</span></h4>
+            <button id="checkout" class="btn btn-primary">Finalizar Compra</button>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Produto Destacado Start -->
+<div class="container py-6">
+    <div class="row align-items-center">
+        <!-- Imagem do Produto -->
+        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+            <img src="img/logoProduct-1.png" class="img-fluid rounded" alt="Produto Destacado">
+        </div>
+        <!-- Detalhes do Produto -->
+        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
+            <h2 class="display-5 mb-3">SpaceViewer</h2>
+            <p class="lead mb-4"> O SpaceViewer garante o monitoramento do fechamento das portas e do consumo de energia,
+                proporcionando um ambiente mais seguro, econômico e sustentável!
+            </p>
+            <h4 class="text-primary mb-4">R$ 000,00</h4>
+            <p class="mb-4">O SpaceView é um sistema integrado de segurança e gerenciamento inteligente de consumo de energia, projetado para atender às necessidades de qualquer ambiente, 
+                desde instituições de ensino até escritórios, residências e indústrias. Desenvolvido para garantir máxima segurança e eficiência energética, o SpaceView combate problemas como 
+                acessos não autorizados a ambientes após o expediente e o uso inadequado de eletrônicos fora do horário permitido.</p>
+            <p class="mb-4">Componentes: 1 placa Arduíno Esp32 WROOM, integrada ao wifi e bluetooth; 1 Sensor de Obstáculo Infravermelho IR;
+               1 Sensor de luminosidade LDR e 1 Módulo Sensor de corrente bidirecional HALL 50A ACS7.
+                </p>
+            <!-- Botão de Compra -->
+            <a href="#" class="btn btn-primary btn-lg">Comprar Agora</a>
+            <!-- Botão de Adicionar ao Carrinho -->
+            <button class="btn btn-success add-to-cart" data-product-name="SpaceView" data-product-price="100">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+</div>
+<!-- Produto Destacado End -->
+
+
+      <!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer my-6 mb-0 py-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Coluna Endereço -->
+            <div class="col-lg-6 col-md-6">
+                <h4 class="text-light mb-4">Endereço</h4>
+                <p class="mb-4"><i class="fa fa-map-marker-alt me-3"></i> R. Cap. Lorival Mey, 750 - Remanso Campineiro, Hortolândia - SP, 13184-470</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>(19) 3897-3727</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>Diretoria Acadêmica: e115acad@cps.sp.gov.br</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>Diretoria de Serviço: e115adm@cps.sp.gov.br</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-square btn-outline-light rounded-circle me-1" href="https://www.instagram.com/etecdehortolandia/"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-square btn-outline-light rounded-circle me-1" href="https://etechortolandia.cps.sp.gov.br/"><i class="fab fa-google"></i></a>
+                </div>
+            </div>
+
+            <!-- Coluna Contato -->
+            <div class="col-lg-6 col-md-6">
+                <h4 class="text-light mb-4">Contato</h4>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>(19) 9200-5302</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>sac.spaceview@gmail.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-square btn-outline-light rounded-circle me-1" href="https://www.instagram.com/spaceview.project/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+     <!-- Copyright Start -->
+     <div class="container-fluid copyright text-light py-4 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a href="#">SpaceView</a> All Right Reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cartItems = [];
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            const modal = document.getElementById('cart-modal');
+            const openCartButton = document.getElementById('open-cart');
+            const closeModalButton = document.querySelector('.close');
+    
+            // Função para adicionar item ao carrinho
+            function addToCart(productName, productPrice) {
+                cartItems.push({ name: productName, price: productPrice });
+                renderCart();
+            }
+    
+            // Função para renderizar o carrinho
+            function renderCart() {
+                cartItemsContainer.innerHTML = '';
+                let total = 0;
+    
+                cartItems.forEach((item, index) => {
+                    const cartItem = document.createElement('div');
+                    cartItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
+                    cartItem.innerHTML = `
+                        <span>${item.name}</span>
+                        <span>R$ ${item.price.toFixed(2)}</span>
+                        <button class="btn btn-sm btn-danger remove-item" data-index="${index}">Remover</button>
+                    `;
+                    cartItemsContainer.appendChild(cartItem);
+                    total += item.price;
+                });
+    
+                cartTotal.textContent = `R$ ${total.toFixed(2)}`;
+            }
+    
+            // Adiciona evento aos botões de adicionar ao carrinho
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', function () {
+                    const productName = this.getAttribute('data-product-name');
+                    const productPrice = parseFloat(this.getAttribute('data-product-price'));
+                    addToCart(productName, productPrice);
+                });
+            });
+    
+            // Evento para remover item do carrinho
+            cartItemsContainer.addEventListener('click', function (e) {
+                if (e.target.classList.contains('remove-item')) {
+                    const itemIndex = e.target.getAttribute('data-index');
+                    cartItems.splice(itemIndex, 1);
+                    renderCart();
+                }
+            });
+    
+            // Evento para abrir o modal
+            openCartButton.addEventListener('click', function () {
+                modal.style.display = 'block';
+            });
+    
+            // Evento para fechar o modal
+            closeModalButton.addEventListener('click', function () {
+                modal.style.display = 'none';
+            });
+    
+            // Fechar o modal se o usuário clicar fora da área do modal
+            window.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+    
+            // Evento de finalizar compra
+            document.getElementById('checkout').addEventListener('click', function () {
+                if (cartItems.length === 0) {
+                    alert('Seu carrinho está vazio!');
+                } else {
+                    alert('Compra finalizada com sucesso!');
+                    cartItems.length = 0; // Limpar o carrinho
+                    renderCart();
+                    modal.style.display = 'none'; // Fechar o modal
+                }
+            });
+        });
+    </script>
+        
+  
+</body>
+
+</html>
